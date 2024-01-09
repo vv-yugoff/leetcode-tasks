@@ -20,4 +20,14 @@ class Solution:
         # Если не найдено пар чисел, сумма которых равна целевому значению, возвращаем пустой список
         return []
 
-# 2. Add Two Numbers
+# 9. Palindrome Number
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x_str = str(x)
+
+        for i in range(len(x_str)):
+            if x_str[i] != x_str[-i-1]:
+                return False
+        return True
+        
