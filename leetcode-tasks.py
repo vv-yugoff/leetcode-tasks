@@ -40,6 +40,17 @@ class Solution:
                 return False
         return True
 
+# or
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        result = 0
+        while x > 0:
+            ostatok = x % 10
+            x = x // 10
+            result = result + ostatok
+            return result
+            
 # 13. Roman to Integer
 
 class Solution:
