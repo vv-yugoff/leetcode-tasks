@@ -20,6 +20,15 @@ class Solution:
         # Если не найдено пар чисел, сумма которых равна целевому значению, возвращаем пустой список
         return []
 
+# or
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+
 # 9. Palindrome Number
 
 class Solution:
