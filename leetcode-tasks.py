@@ -76,4 +76,18 @@ class Solution:
                 i += 1
 
         return result
+
+# 26. Remove Duplicates from Sorted Array
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if len(nums) == 0:
+            return 0
+        unique = 0
+
+        for i in range(1, len(nums)):
+            if nums[i] != nums[unique]:
+                unique += 1
+                nums[unique] = nums[i]
+        return unique + 1
         
