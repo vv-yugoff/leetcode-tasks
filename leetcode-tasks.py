@@ -121,3 +121,16 @@ class Solution:
                 left = mid + 1
         
         return left
+
+# 2520. Count the Digits That Divide a Number
+
+class Solution:
+    def countDigits(self, num: int) -> int:
+        num_str = str(num)
+        count = 0
+        for digit in num_str:
+            digit_num = int(digit)
+
+            if digit_num != 0 and num % digit_num == 0:
+                count += 1
+        return count
