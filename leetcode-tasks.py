@@ -131,7 +131,35 @@ class Solution:
         result += 1
         digits_list = [int(digit) for digit in str(result)]
         return digits_list
-        
+
+# 88. Merge Sorted Array
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        nums1.extend(nums2)
+        nums1.sort()
+        while 0 in nums1:
+            nums1.remove(0)
+        return nums1
+    
+# or
+    
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        nums1.extend(nums2)
+        nums1.sort()
+        nums1 = [num for num in nums1 if num >= 0]
+        return nums1
+
+# 108. Convert Sorted Array to Binary Search Tree
+    
+
 
 # 2520. Count the Digits That Divide a Number
 
