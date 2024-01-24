@@ -122,6 +122,17 @@ class Solution:
         
         return left
 
+# 66. Plus One
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        digits_str = ''.join(str(num) for num in digits)
+        result = int(digits_str)
+        result += 1
+        digits_list = [int(digit) for digit in str(result)]
+        return digits_list
+        
+
 # 2520. Count the Digits That Divide a Number
 
 class Solution:
